@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/FlatButton';
 import './Layout.css';
 
 const style = {
-  height: 200,
+  height: 250,
   width: 500,
   margin: '200px auto',
   textAlign: 'center',
@@ -37,10 +37,10 @@ class Layout extends Component {
     return (
       <div className="Layout">
           <PaperSimple circle={false} style={style}>
-            <div><b>Login</b></div>
+            <div style={{color : '#808080', fontSize : 20}}><b>Login</b></div>
              <TextField className="" fullWidth={true} hintText="Email" name="email" value={this.state.email} onChange={e=> this.submitLogin(e)} floatingLabelText="Email ID"/>
              <TextField className="" fullWidth={true} hintTex="Password" name="pass" value={this.state.pass} onChange={e=> this.submitLogin(e)} floatingLabelText="Password"/>
-             <FlatButton label="Cancel" secondary={true} backgroundColor={'#E7E7E7'} hoverColor='#B39DDB' />
+             <FlatButton label="Cancel" secondary={true} backgroundColor={'#E7E7E7'} hoverColor='#B39DDB' />&nbsp;
              <FlatButton label="Submit" primary={true} backgroundColor={'#E7E7E7'} hoverColor='#B39DDB' onClick={e=> this.submit(e)} />
           </PaperSimple>
       </div>

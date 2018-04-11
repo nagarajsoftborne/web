@@ -35,7 +35,7 @@ class Layout extends Component {
 
   render() {
     return (
-      <div className="Layout">
+      <div className="Layout">  
           <PaperSimple circle={false} style={style}>
             <div style={{color : '#808080', fontSize : 20}}><b>Login</b></div>
              <TextField className="" fullWidth={true} hintText="Email" name="email" value={this.state.email} onChange={e=> this.submitLogin(e)} floatingLabelText="Email ID"/>

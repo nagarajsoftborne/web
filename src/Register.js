@@ -6,14 +6,14 @@ import DatePicker from 'material-ui/DatePicker';
 import FlatButton from 'material-ui/FlatButton';
 
 const style = {
-    height: 250,
+    height: 400,
     width: 500,
-    margin: '200px auto',
+    margin: '120px auto',
     textAlign: 'center',
     display: 'inline-block',
   };
 
-class Register extends Component{
+class Register extends Component {
 
   constructor(props){
     super(props);
@@ -30,9 +30,9 @@ class Register extends Component{
     }
 
     DatePicker(e,data){
-        // this.setState({
-        //     date : '12323'
-        // });
+        this.setState({
+            date : '12323'
+        });
         console.log(data);
     }
 
@@ -45,6 +45,8 @@ class Register extends Component{
             <PaperSimple circle={false} style={style}>
                 <div style={{color : '#808080', fontSize : 20}}><b>Register</b></div>
                 <TextField className="" fullWidth={false} hintText="Name" name="name" onChange={e=> this.registerData(e)} floatingLabelText="Name"/>
+                <TextField className="" fullWidth={false} hintText="Email" name="email" onChange={e=> this.registerData(e)} floatingLabelText="Email"/>
+                <TextField className="" fullWidth={false} hintText="Password" name="pass" onChange={e=> this.registerData(e)} floatingLabelText="Password"/>
                 <DatePicker floatingLabelText="DOB" hintText="DOB" name="date"  onChange={this.DatePicker}/>
                 <FlatButton label="Cancel" secondary={true} backgroundColor={'#E7E7E7'} hoverColor='#B39DDB' />&nbsp;
                 <FlatButton label="Submit" primary={true} backgroundColor={'#E7E7E7'} hoverColor='#B39DDB' onClick={e=> this.submitRegister(e)} />
